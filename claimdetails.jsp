@@ -29,14 +29,13 @@ and open the template in the editor.
           String empid=(String)session.getAttribute("empid"); 
            out.println("Welcome  " +empid);
       %>
-        <form name="myform" method="post" action="edit.jsp" >
+       
+      <form name="myform" method="post" action="editdetails.jsp" >
          
-        
-  
-            Tour Date: <input type="date"  id="tdate" name="tdate" required=""/><br> 
-        Starting Place:<input type="text"  id="startplace"  name="startplace" required=""/><br>
-        Destination Place:<input type="text" id="dplace" name="dplace"  required=""/><br>
-        Expenses Incurred:<input type="number"  id="expenses" name="expenses" required=""/><br>
+            Tour Date: <input type="date"  id="tdate" name="tdate" required=""/><br/>
+            Starting Place:<input type="text"  id="startplace"  name="startplace" required=""/><br>
+            Destination Place:<input type="text" id="dplace" name="dplace"  required=""/><br>
+            Expenses Incurred:<input type="number"  id="expenses" name="expenses" required=""/><br>
         
         <input type="submit" value="submit"/>
     

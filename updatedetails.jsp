@@ -20,10 +20,14 @@
         
         
         <% 
-            String splace=request.getParameter("splace");
-            String dplace=request.getParameter("dplace");
-            String expenses=request.getParameter("expenses");
-            String tdate=request.getParameter("tdate");
+            String splace=request.getParameter("splace1");
+            System.out.println("splace");
+            String dplace=request.getParameter("dplace1");
+            System.out.println("dplace");
+            String expenses=request.getParameter("expenses1");
+            System.out.println("expenses");
+            String tdate=request.getParameter("tdate1");
+            System.out.println("tdate");
             
             Class.forName("oracle.jdbc.OracleDriver");
                System.out.println("connected");
@@ -32,7 +36,7 @@
        Connection con=DriverManager.getConnection(url,"hr","hr");
          System.out.println("connected ---1");
          String empid=(String)session.getAttribute("empid");
-       String sql="update detail set splace=?,dplace=?,expenses=?,tdate=? where empid= +empid";
+       String sql="update detail set splace=?,dplace=?,expenses=?,tdate=? where splace= +splace";
          System.out.println("sql"+sql);
          
          

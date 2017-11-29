@@ -34,7 +34,7 @@
          System.out.println("connected ---1");
          String empid=(String)session.getAttribute("empid");
        String sql="update register_new set name=?,password=?,department=?,designation=?,mobilenumber=? where empid=?";
-         //System.out.println("sql"+sql);
+         System.out.println("sql"+sql);
          
          
           PreparedStatement ps=con.prepareStatement(sql);
@@ -59,6 +59,8 @@
       }
       
       %>
-      <a href="index.jsp">Back</a>
+    
+      <br/>
+      <b> <a href="index.jsp">Back</a></b>
     </body>
 </html>

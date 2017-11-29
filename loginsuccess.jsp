@@ -29,14 +29,14 @@
             System.out.println("connected");
             con=DriverManager.getConnection("jdbc:oracle:thin:@10.194.32.41:1521:XE", "hr", "hr");
             System.out.println("done 1");
-            String sql="select * from register_new where empid=? and password=?";
+            String sql="select * from register_new where empid='"+empid+ "' and password='"+password+ "'";
             System.out.println(sql);
             PreparedStatement ps=con.prepareStatement(sql);
         
         
         
-        ps.setString(1, empid);
-        ps.setString(2,password);
+     //   ps.setString(1, empid);
+      //  ps.setString(2,password);
        ResultSet rs= ps.executeQuery();
      while(rs.next())
      {
